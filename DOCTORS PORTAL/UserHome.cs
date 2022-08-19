@@ -15,9 +15,15 @@ namespace DOCTORS_PORTAL
         userSelectDoctor userSelectDoctor = new userSelectDoctor();
         userDashboard userDashboard = new userDashboard();
 
+        private DataAccess Da { get; set; }
+
         public UserHome()
         {
+
             InitializeComponent();
+
+            Da = new DataAccess();
+            
         }
 
         private void UserHome_Load(object sender, EventArgs e)
@@ -72,8 +78,10 @@ namespace DOCTORS_PORTAL
 
         private void dhakaBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            userSelectDoctor.Show();
+            /*this.Hide();
+            userSelectDoctor.Show();*/
+            string sql = "insert into [DoctorsPortal].[dbo].[user] (id, name, password) values ('004', 'Md Saimon Bolda', 'jjs123456');";
+            Da.ExecuteQuery(sql);
         }
     }
 }
