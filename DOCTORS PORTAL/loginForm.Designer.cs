@@ -405,7 +405,7 @@ namespace DOCTORS_PORTAL
             this.gunaButton1.AnimationHoverSpeed = 0.07F;
             this.gunaButton1.AnimationSpeed = 0.03F;
             this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(46)))), ((int)(((byte)(209)))));
+            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.gunaButton1.BorderColor = System.Drawing.Color.Black;
             this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
