@@ -336,5 +336,11 @@
   <ItemGroup>
     <None Include="images\facebook.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
