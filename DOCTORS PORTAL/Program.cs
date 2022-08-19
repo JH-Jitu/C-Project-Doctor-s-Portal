@@ -16,7 +16,7 @@ namespace DOCTORS_PORTAL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserHome());
+            Application.Run(new loginForm());
         }
     }
 }
