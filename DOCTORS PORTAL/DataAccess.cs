@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+
+using System.Windows.Forms;
 
 namespace DOCTORS_PORTAL
 {
@@ -54,10 +57,23 @@ namespace DOCTORS_PORTAL
         public DataSet ExecuteQuery(string sql)
         {
             this.QueryText(sql);
-            this.Sda = new SqlDataAdapter(this.Sqlcom);
-            this.Ds = new DataSet();
-            this.Sda.Fill(this.Ds);
+            try
+            {
+                this.Sda = new SqlDataAdapter(this.Sqlcom);
+                this.Ds = new DataSet();
+                this.Sda.Fill(this.Ds);
+            }
+            catch (Exception ex)
+            {
+                ExcHandling(ex.Message);
+            }
             return Ds;
+
+        }
+
+        public void ExcHandling(string message)
+        {
+            MessageBox.Show(message, "⚠️There Was an Error!");   
         }
 
         public DataTable ExecuteQueryTable(string sql)
