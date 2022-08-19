@@ -30,6 +30,7 @@ namespace DOCTORS_PORTAL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             this.userHomeForm = new Guna.UI.WinForms.GunaElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,15 +42,29 @@ namespace DOCTORS_PORTAL
             this.LogoText2 = new System.Windows.Forms.Label();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.loginBtn = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // userHomeForm
@@ -204,9 +219,9 @@ namespace DOCTORS_PORTAL
             this.gunaLabel2.ForeColor = System.Drawing.Color.DarkGray;
             this.gunaLabel2.Location = new System.Drawing.Point(443, 173);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(91, 19);
+            this.gunaLabel2.Size = new System.Drawing.Size(49, 19);
             this.gunaLabel2.TabIndex = 22;
-            this.gunaLabel2.Text = "Please Login";
+            this.gunaLabel2.Text = "Email:";
             // 
             // gunaLabel1
             // 
@@ -218,6 +233,94 @@ namespace DOCTORS_PORTAL
             this.gunaLabel1.Size = new System.Drawing.Size(272, 59);
             this.gunaLabel1.TabIndex = 23;
             this.gunaLabel1.Text = "Please Login";
+            // 
+            // gunaTextBox1
+            // 
+            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
+            this.gunaTextBox1.BorderSize = 0;
+            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gunaTextBox1.Font = new System.Drawing.Font("Calibri", 12F);
+            this.gunaTextBox1.Location = new System.Drawing.Point(37, 4);
+            this.gunaTextBox1.Name = "gunaTextBox1";
+            this.gunaTextBox1.PasswordChar = '\0';
+            this.gunaTextBox1.SelectedText = "";
+            this.gunaTextBox1.Size = new System.Drawing.Size(359, 30);
+            this.gunaTextBox1.TabIndex = 13;
+            this.gunaTextBox1.Text = "Enter Name";
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Calibri", 12F);
+            this.gunaLabel3.ForeColor = System.Drawing.Color.DarkGray;
+            this.gunaLabel3.Location = new System.Drawing.Point(443, 254);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(75, 19);
+            this.gunaLabel3.TabIndex = 22;
+            this.gunaLabel3.Text = "Password:";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.gunaTextBox2);
+            this.panel3.Controls.Add(this.pictureBox7);
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Controls.Add(this.pictureBox6);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Location = new System.Drawing.Point(447, 276);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(400, 40);
+            this.panel3.TabIndex = 18;
+            // 
+            // gunaTextBox2
+            // 
+            this.gunaTextBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox2.BorderColor = System.Drawing.Color.Silver;
+            this.gunaTextBox2.BorderSize = 0;
+            this.gunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gunaTextBox2.Font = new System.Drawing.Font("Calibri", 12F);
+            this.gunaTextBox2.Location = new System.Drawing.Point(37, 4);
+            this.gunaTextBox2.Name = "gunaTextBox2";
+            this.gunaTextBox2.PasswordChar = '\0';
+            this.gunaTextBox2.SelectedText = "";
+            this.gunaTextBox2.Size = new System.Drawing.Size(325, 30);
+            this.gunaTextBox2.TabIndex = 13;
+            this.gunaTextBox2.Text = "Enter Password";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(46)))), ((int)(((byte)(209)))));
+            this.panel4.Location = new System.Drawing.Point(0, 37);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(400, 3);
+            this.panel4.TabIndex = 12;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DOCTORS_PORTAL.Properties.Resources.eyeCross;
+            this.pictureBox6.Location = new System.Drawing.Point(368, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DOCTORS_PORTAL.Properties.Resources._lock;
+            this.pictureBox4.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -231,7 +334,7 @@ namespace DOCTORS_PORTAL
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DOCTORS_PORTAL.Properties.Resources.loginImage;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(13, 81);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(384, 507);
@@ -250,23 +353,78 @@ namespace DOCTORS_PORTAL
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // gunaTextBox1
+            // pictureBox7
             // 
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.BorderSize = 0;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(38, 5);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(359, 28);
-            this.gunaTextBox1.TabIndex = 13;
-            this.gunaTextBox1.Text = "Enter Name";
+            this.pictureBox7.Image = global::DOCTORS_PORTAL.Properties.Resources.eye;
+            this.pictureBox7.Location = new System.Drawing.Point(368, 6);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // loginBtn
+            // 
+            this.loginBtn.AnimationHoverSpeed = 0.07F;
+            this.loginBtn.AnimationSpeed = 0.03F;
+            this.loginBtn.BackColor = System.Drawing.Color.Transparent;
+            this.loginBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(46)))), ((int)(((byte)(209)))));
+            this.loginBtn.BorderColor = System.Drawing.Color.Black;
+            this.loginBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.loginBtn.FocusedColor = System.Drawing.Color.Empty;
+            this.loginBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.loginBtn.ForeColor = System.Drawing.Color.White;
+            this.loginBtn.Image = null;
+            this.loginBtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.loginBtn.Location = new System.Drawing.Point(447, 352);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.loginBtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.loginBtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.loginBtn.OnHoverImage = null;
+            this.loginBtn.OnPressedColor = System.Drawing.Color.Black;
+            this.loginBtn.Radius = 10;
+            this.loginBtn.Size = new System.Drawing.Size(400, 40);
+            this.loginBtn.TabIndex = 24;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel4.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel4.Location = new System.Drawing.Point(565, 412);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(175, 27);
+            this.gunaLabel4.TabIndex = 22;
+            this.gunaLabel4.Text = "Forget password?";
+            // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(46)))), ((int)(((byte)(209)))));
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.gunaButton1.ForeColor = System.Drawing.Color.White;
+            this.gunaButton1.Image = null;
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(536, 457);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Radius = 10;
+            this.gunaButton1.Size = new System.Drawing.Size(228, 40);
+            this.gunaButton1.TabIndex = 24;
+            this.gunaButton1.Text = "Create New Account";
+            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // loginForm
             // 
@@ -274,11 +432,16 @@ namespace DOCTORS_PORTAL
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(7)))), ((int)(((byte)(94)))));
             this.ClientSize = new System.Drawing.Size(900, 600);
+            this.Controls.Add(this.gunaButton1);
+            this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.minBtn);
             this.Controls.Add(this.maxBtn);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.gunaPanel1);
+            this.Controls.Add(this.gunaLabel4);
+            this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.gunaLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -288,9 +451,13 @@ namespace DOCTORS_PORTAL
             this.panel1.ResumeLayout(false);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,5 +480,15 @@ namespace DOCTORS_PORTAL
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private System.Windows.Forms.Panel panel3;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel4;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton loginBtn;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
     }
 }
