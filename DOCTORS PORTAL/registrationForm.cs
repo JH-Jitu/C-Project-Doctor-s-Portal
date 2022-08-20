@@ -143,5 +143,10 @@ namespace DOCTORS_PORTAL
             show.Show();
             passTextBoxReg.PasswordChar = '●';
         }
+
+        private void nameTextBoxReg_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

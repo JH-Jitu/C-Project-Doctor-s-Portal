@@ -23,7 +23,7 @@ namespace DOCTORS_PORTAL
             // placeholders
 
             // To show star
-            passLogin.PasswordChar = '*';
+            passLogin.PasswordChar = '●';
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
@@ -64,7 +64,23 @@ namespace DOCTORS_PORTAL
                 string sql = "SELECT * FROM [DoctorsPortal].[dbo].[user] where Email='" + emailLogin.Text + "' AND password='" + passLogin.Text + "'";
                 DataSet ds = Da.ExecuteQuery(sql);
 
-                MessageBox.Show(ds.Tables[0].Rows[0]["id"].ToString());
+                //MessageBox.Show(ds.Tables[0].Rows[0]["id"].ToString());
+
+                if(ds.Tables[0].Rows[0]["email"].ToString() == emailLogin.Text || ds.Tables[0].Rows[0]["password"].ToString() == passLogin.Text)
+                {
+                    UserHome userHomeObj = new UserHome(ds);
+
+
+                    userHomeObj.Show();
+                    Hide();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No user exist");
+                }
+
 
                 
             }
@@ -130,7 +146,7 @@ namespace DOCTORS_PORTAL
         {
             hide.Hide();
             show.Show();
-            passLogin.PasswordChar = '*';
+            passLogin.PasswordChar = '●';
         }
     }
 }

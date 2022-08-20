@@ -14,6 +14,7 @@ namespace DOCTORS_PORTAL
     {
         userSelectDoctor userSelectDoctor = new userSelectDoctor();
         userDashboard userDashboard = new userDashboard();
+        private DataSet dsObj;
 
         private DataAccess Da { get; set; }
 
@@ -24,6 +25,15 @@ namespace DOCTORS_PORTAL
 
             Da = new DataAccess();
             
+        }
+        
+
+        public UserHome(DataSet dsObj)
+        {
+            InitializeComponent();
+            showEmail.Text = dsObj.Tables[0].Rows[0]["email"].ToString();
+            showName.Text = dsObj.Tables[0].Rows[0]["name"].ToString();
+
         }
 
         private void UserHome_Load(object sender, EventArgs e)
@@ -83,5 +93,7 @@ namespace DOCTORS_PORTAL
             string sql = "insert into [DoctorsPortal].[dbo].[user] (id, name, password, email) values ('006', 'Md Saimon Bolda', 'jjs123456', 'jitu@gmail.com');";
             Da.ExecuteQuery(sql);
         }
+
+
     }
 }
