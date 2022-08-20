@@ -13,10 +13,12 @@ namespace DOCTORS_PORTAL
 {
     public partial class registrationForm : Form
     {
+        private DataAccess Da { get; set; }
         public registrationForm()
         {
             InitializeComponent();
             rightEmail.Text = "";
+            Da = new DataAccess();
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
@@ -46,7 +48,75 @@ namespace DOCTORS_PORTAL
 
         private void registrationBtn_Click(object sender, EventArgs e)
         {
-            
+            if (!this.isValidToLogin() || !isEmailNotSpam())
+            {
+                MessageBox.Show("Please provide valid informations!");
+                return;
+            }
+
+            try
+            {
+                //string sql = "SELECT * FROM [DoctorsPortal].[dbo].[user] where Email='" + emailLogin.Text + "' AND password='" + passLogin.Text + "'";
+                //DataSet ds = Da.ExecuteQuery(sql);
+
+                //string sql = "CREATE TABLE [DoctorsPortal].[dbo].[user] (id int IDENTITY(1,1), name varchar(60) NOT NULL, password varchar(60) NOT NULL, Email varchar(60) NOT NULL  PRIMARY KEY, ImageLink varchar(30));";
+                string sql = "insert into [DoctorsPortal].[dbo].[user] (name, password, email) values ('" + nameTextBoxReg.Text + "', '" + passTextBoxReg.Text + "', '" + emailTextBoxReg.Text + "');";
+
+                DataSet ds = Da.ExecuteQuery(sql);
+
+                //MessageBox.Show(ds.Tables[0].Rows[0]["id"].ToString());
+
+                string sqlAfterReg = "SELECT * FROM [DoctorsPortal].[dbo].[user] where Email='" + emailTextBoxReg.Text + "' AND password='" + passTextBoxReg.Text + "'";
+                DataSet dsAfterReg = Da.ExecuteQuery(sqlAfterReg);
+
+
+
+                if (dsAfterReg.Tables[0].Rows[0]["email"].ToString() == emailTextBoxReg.Text || dsAfterReg.Tables[0].Rows[0]["password"].ToString() == passTextBoxReg.Text)
+                {
+                    UserHome userHomeObj = new UserHome(dsAfterReg);
+
+
+                    userHomeObj.Show();
+                    Hide();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No user exist");
+                }
+
+
+
+            }
+            catch (Exception exe)
+            {
+                MessageBox.Show(exe.Message);
+            }
+        }
+
+
+        // Check Constraint
+        bool isValidToLogin()
+        {
+            if (String.IsNullOrEmpty(nameTextBoxReg.Text) || String.IsNullOrWhiteSpace(emailTextBoxReg.Text) || String.IsNullOrWhiteSpace(passTextBoxReg.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        bool isEmailNotSpam()
+        {
+            string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+            if (!Regex.IsMatch(emailTextBoxReg.Text, pattern))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void nameTextBoxReg_Enter(object sender, EventArgs e)
@@ -142,11 +212,6 @@ namespace DOCTORS_PORTAL
             hide.Hide();
             show.Show();
             passTextBoxReg.PasswordChar = '●';
-        }
-
-        private void nameTextBoxReg_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

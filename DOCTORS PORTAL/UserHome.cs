@@ -31,6 +31,7 @@ namespace DOCTORS_PORTAL
         public UserHome(DataSet dsObj)
         {
             InitializeComponent();
+            this.dsObj = dsObj;
             showEmail.Text = dsObj.Tables[0].Rows[0]["email"].ToString();
             showName.Text = dsObj.Tables[0].Rows[0]["name"].ToString();
 
