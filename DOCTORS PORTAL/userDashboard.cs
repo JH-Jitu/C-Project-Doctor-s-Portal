@@ -12,11 +12,19 @@ namespace DOCTORS_PORTAL
 {
     public partial class userDashboard : Form
     {
-        //UserHome userHome = new UserHome();
+        private DataAccess Da { get; set; }
 
         public userDashboard()
         {
             InitializeComponent();
+            Da = new DataAccess();
+        }
+
+        public userDashboard(DataSet dsObj)
+        {
+            InitializeComponent();
+            showEmail.Text = dsObj.Tables[0].Rows[0]["email"].ToString();
+            showName.Text = dsObj.Tables[0].Rows[0]["name"].ToString();
         }
 
         private void userDashboard_Load(object sender, EventArgs e)

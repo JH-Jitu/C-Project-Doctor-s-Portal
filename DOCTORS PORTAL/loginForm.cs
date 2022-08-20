@@ -18,12 +18,11 @@ namespace DOCTORS_PORTAL
         public loginForm()
         {
             InitializeComponent();
-            Da = new DataAccess();
             rightEmail.Text = "";
-            // placeholders
+            Da = new DataAccess();
 
             // To show star
-            passLogin.PasswordChar = '●';
+            //passLogin.PasswordChar = '●';
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
@@ -69,12 +68,10 @@ namespace DOCTORS_PORTAL
                 if(ds.Tables[0].Rows[0]["email"].ToString() == emailLogin.Text || ds.Tables[0].Rows[0]["password"].ToString() == passLogin.Text)
                 {
                     UserHome userHomeObj = new UserHome(ds);
-
+                    userDashboard userDashboardObj = new userDashboard(ds);
 
                     userHomeObj.Show();
                     Hide();
-
-
                 }
                 else
                 {
@@ -105,14 +102,6 @@ namespace DOCTORS_PORTAL
 
         private void gunaTextBox1_TextChanged(object sender, EventArgs e)
         {
-            if(emailLogin.Text != "")
-            {
-                placeholderEmail.Text = "";
-            } else
-            {
-                placeholderEmail.Text = "someone@xyz.com";
-
-            }
             string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
             if (!Regex.IsMatch(emailLogin.Text, pattern))
             {
@@ -121,18 +110,6 @@ namespace DOCTORS_PORTAL
             {
                 rightEmail.Text = "✔️";
             }
-        }
-
-        private void passLogin_TextChanged(object sender, EventArgs e)
-        {
-            if (passLogin.Text != "")
-            {
-                placeholderPass.Text = "";
-            } else
-            {
-                placeholderPass.Text = "123456@abc";
-            }
-            
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -147,6 +124,51 @@ namespace DOCTORS_PORTAL
             hide.Hide();
             show.Show();
             passLogin.PasswordChar = '●';
+        }
+
+        private void emailLogin_Enter(object sender, EventArgs e)
+        {
+            if (emailLogin.Text == "someone@example.com")
+            {
+                emailLogin.Text = "";
+                emailLogin.ForeColor = Color.Black;
+            }
+        }
+
+        private void emailLogin_Leave(object sender, EventArgs e)
+        {
+            if (emailLogin.Text == "")
+            {
+                emailLogin.Text = "someone@example.com";
+                emailLogin.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void rightEmail_Click(object sender, EventArgs e)
+        {
+            if (rightEmail.Text == "❌")
+            {
+                emailLogin.Text = "";
+            }
+        }
+
+        private void passLogin_Enter(object sender, EventArgs e)
+        {
+            if (passLogin.Text == "Enter Password")
+            {
+                passLogin.Text = "";
+                passLogin.PasswordChar = '●';
+                passLogin.ForeColor = Color.Black;
+            }
+        }
+
+        private void passLogin_Leave(object sender, EventArgs e)
+        {
+            if (passLogin.Text == "")
+            {
+                passLogin.Text = "Enter Password";
+                passLogin.ForeColor = Color.LightGray;
+            }
         }
     }
 }

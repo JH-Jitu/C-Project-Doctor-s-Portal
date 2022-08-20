@@ -44,14 +44,12 @@ namespace DOCTORS_PORTAL
             this.goRegistrationFormBtn = new Guna.UI.WinForms.GunaButton();
             this.loginBtn = new Guna.UI.WinForms.GunaButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.placeholderPass = new System.Windows.Forms.Label();
             this.passLogin = new Guna.UI.WinForms.GunaTextBox();
             this.show = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.hide = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.placeholderEmail = new System.Windows.Forms.Label();
             this.rightEmail = new System.Windows.Forms.Label();
             this.emailLogin = new Guna.UI.WinForms.GunaTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -300,7 +298,6 @@ namespace DOCTORS_PORTAL
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.placeholderPass);
             this.panel3.Controls.Add(this.passLogin);
             this.panel3.Controls.Add(this.show);
             this.panel3.Controls.Add(this.pictureBox4);
@@ -310,16 +307,6 @@ namespace DOCTORS_PORTAL
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(400, 40);
             this.panel3.TabIndex = 26;
-            // 
-            // placeholderPass
-            // 
-            this.placeholderPass.AutoSize = true;
-            this.placeholderPass.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.placeholderPass.Location = new System.Drawing.Point(38, 13);
-            this.placeholderPass.Name = "placeholderPass";
-            this.placeholderPass.Size = new System.Drawing.Size(72, 13);
-            this.placeholderPass.TabIndex = 15;
-            this.placeholderPass.Text = "123456@abc";
             // 
             // passLogin
             // 
@@ -331,16 +318,20 @@ namespace DOCTORS_PORTAL
             this.passLogin.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.passLogin.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.passLogin.Font = new System.Drawing.Font("Calibri", 12F);
+            this.passLogin.ForeColor = System.Drawing.Color.LightGray;
             this.passLogin.Location = new System.Drawing.Point(37, 4);
             this.passLogin.Name = "passLogin";
             this.passLogin.PasswordChar = '\0';
             this.passLogin.SelectedText = "";
             this.passLogin.Size = new System.Drawing.Size(325, 30);
             this.passLogin.TabIndex = 1;
-            this.passLogin.TextChanged += new System.EventHandler(this.passLogin_TextChanged);
+            this.passLogin.Text = "Enter Password";
+            this.passLogin.Enter += new System.EventHandler(this.passLogin_Enter);
+            this.passLogin.Leave += new System.EventHandler(this.passLogin_Leave);
             // 
             // show
             // 
+            this.show.Cursor = System.Windows.Forms.Cursors.Hand;
             this.show.Image = global::DOCTORS_PORTAL.Properties.Resources.eye;
             this.show.Location = new System.Drawing.Point(368, 5);
             this.show.Name = "show";
@@ -362,6 +353,7 @@ namespace DOCTORS_PORTAL
             // 
             // hide
             // 
+            this.hide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hide.Image = global::DOCTORS_PORTAL.Properties.Resources.eyeCross;
             this.hide.Location = new System.Drawing.Point(368, 5);
             this.hide.Name = "hide";
@@ -382,7 +374,6 @@ namespace DOCTORS_PORTAL
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.placeholderEmail);
             this.panel2.Controls.Add(this.rightEmail);
             this.panel2.Controls.Add(this.emailLogin);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -392,24 +383,17 @@ namespace DOCTORS_PORTAL
             this.panel2.Size = new System.Drawing.Size(400, 40);
             this.panel2.TabIndex = 27;
             // 
-            // placeholderEmail
-            // 
-            this.placeholderEmail.AutoSize = true;
-            this.placeholderEmail.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.placeholderEmail.Location = new System.Drawing.Point(38, 13);
-            this.placeholderEmail.Name = "placeholderEmail";
-            this.placeholderEmail.Size = new System.Drawing.Size(99, 13);
-            this.placeholderEmail.TabIndex = 14;
-            this.placeholderEmail.Text = "someone@xyz.com";
-            // 
             // rightEmail
             // 
             this.rightEmail.AutoSize = true;
-            this.rightEmail.Location = new System.Drawing.Point(376, 13);
+            this.rightEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rightEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rightEmail.Location = new System.Drawing.Point(373, 9);
             this.rightEmail.Name = "rightEmail";
-            this.rightEmail.Size = new System.Drawing.Size(15, 13);
+            this.rightEmail.Size = new System.Drawing.Size(21, 20);
             this.rightEmail.TabIndex = 13;
             this.rightEmail.Text = "R";
+            this.rightEmail.Click += new System.EventHandler(this.rightEmail_Click);
             // 
             // emailLogin
             // 
@@ -421,13 +405,17 @@ namespace DOCTORS_PORTAL
             this.emailLogin.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.emailLogin.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.emailLogin.Font = new System.Drawing.Font("Calibri", 12F);
+            this.emailLogin.ForeColor = System.Drawing.Color.LightGray;
             this.emailLogin.Location = new System.Drawing.Point(37, 4);
             this.emailLogin.Name = "emailLogin";
             this.emailLogin.PasswordChar = '\0';
             this.emailLogin.SelectedText = "";
             this.emailLogin.Size = new System.Drawing.Size(359, 30);
             this.emailLogin.TabIndex = 1;
+            this.emailLogin.Text = "someone@example.com";
             this.emailLogin.TextChanged += new System.EventHandler(this.gunaTextBox1_TextChanged);
+            this.emailLogin.Enter += new System.EventHandler(this.emailLogin_Enter);
+            this.emailLogin.Leave += new System.EventHandler(this.emailLogin_Leave);
             // 
             // pictureBox3
             // 
@@ -515,7 +503,6 @@ namespace DOCTORS_PORTAL
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide)).EndInit();
@@ -555,7 +542,5 @@ namespace DOCTORS_PORTAL
         private System.Windows.Forms.Label rightEmail;
         private Guna.UI.WinForms.GunaTextBox passLogin;
         private Guna.UI.WinForms.GunaTextBox emailLogin;
-        private System.Windows.Forms.Label placeholderPass;
-        private System.Windows.Forms.Label placeholderEmail;
     }
 }
