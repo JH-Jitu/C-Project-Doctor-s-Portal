@@ -26,5 +26,10 @@ namespace DOCTORS_PORTAL
         {
 
         }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -377,6 +377,7 @@ namespace DOCTORS_PORTAL
             this.closeBtn.Size = new System.Drawing.Size(17, 17);
             this.closeBtn.TabIndex = 42;
             this.closeBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // userHomeForm
             // 

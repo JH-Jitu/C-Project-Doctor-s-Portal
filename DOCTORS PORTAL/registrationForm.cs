@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DOCTORS_PORTAL
 {
-    public partial class loginForm : Form
+    public partial class registrationForm : Form
     {
-        public loginForm()
+        public registrationForm()
         {
             InitializeComponent();
         }
@@ -35,18 +35,11 @@ namespace DOCTORS_PORTAL
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void goRegistrationFormBtn_Click_1(object sender, EventArgs e)
+        private void goLoginFormLabel_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            registrationForm registrationForm = new registrationForm();
-            registrationForm.Show();
-        }
-
-        private void loginBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            UserHome userHome = new UserHome();
-            userHome.Show();
+            loginForm loginForm = new loginForm();
+            loginForm.Show();
         }
     }
 }

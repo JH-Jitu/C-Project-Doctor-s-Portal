@@ -73,7 +73,7 @@ namespace DOCTORS_PORTAL
 
         public void ExcHandling(string message)
         {
-            MessageBox.Show(message, "⚠️There Was an Error!");   
+            MessageBox.Show(message, "⚠️Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);   
         }
 
         public DataTable ExecuteQueryTable(string sql)
