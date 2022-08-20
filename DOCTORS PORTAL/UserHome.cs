@@ -80,7 +80,7 @@ namespace DOCTORS_PORTAL
         {
             /*this.Hide();
             userSelectDoctor.Show();*/
-            string sql = "insert into [DoctorsPortal].[dbo].[user] (id, name, password) values ('005', 'Md Saimon Bolda', 'jjs123456');";
+            string sql = "insert into [DoctorsPortal].[dbo].[user] (id, name, password, email) values ('006', 'Md Saimon Bolda', 'jjs123456', 'jitu@gmail.com');";
             Da.ExecuteQuery(sql);
         }
     }

@@ -41,7 +41,6 @@ namespace DOCTORS_PORTAL
             this.maxBtn = new Guna.UI.WinForms.GunaButton();
             this.closeBtn = new Guna.UI.WinForms.GunaButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.goRegistrationFormBtn = new Guna.UI.WinForms.GunaButton();
             this.loginBtn = new Guna.UI.WinForms.GunaButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -228,7 +227,6 @@ namespace DOCTORS_PORTAL
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.goRegistrationFormBtn);
             this.panel1.Controls.Add(this.loginBtn);
             this.panel1.Controls.Add(this.panel3);
@@ -242,13 +240,6 @@ namespace DOCTORS_PORTAL
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 600);
             this.panel1.TabIndex = 46;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(186, 176);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 32;
             // 
             // goRegistrationFormBtn
             // 
@@ -564,7 +555,6 @@ namespace DOCTORS_PORTAL
         private System.Windows.Forms.Label rightEmail;
         private Guna.UI.WinForms.GunaTextBox passLogin;
         private Guna.UI.WinForms.GunaTextBox emailLogin;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label placeholderPass;
         private System.Windows.Forms.Label placeholderEmail;
     }

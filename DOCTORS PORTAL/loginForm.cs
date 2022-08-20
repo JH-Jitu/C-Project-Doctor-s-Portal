@@ -13,9 +13,12 @@ namespace DOCTORS_PORTAL
 {
     public partial class loginForm : Form
     {
+
+        private DataAccess Da { get; set; }
         public loginForm()
         {
             InitializeComponent();
+            Da = new DataAccess();
             rightEmail.Text = "";
             // placeholders
 
@@ -50,9 +53,38 @@ namespace DOCTORS_PORTAL
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            if (!this.isValidToLogin())
+            {
+                MessageBox.Show("Please fill the informations");
+                return;
+            }
+
+            try
+            {
+                string sql = "SELECT * FROM [DoctorsPortal].[dbo].[user] where Email='" + emailLogin.Text + "' AND password='" + passLogin.Text + "'";
+                DataSet ds = Da.ExecuteQuery(sql);
+
+                MessageBox.Show(ds.Tables[0].Rows[0]["id"].ToString());
+
+                
+            }
+            catch (Exception exe)
+            {
+                MessageBox.Show(exe.Message);
+            }
+
+            /*this.Hide();
             UserHome userHome = new UserHome();
-            userHome.Show();
+            userHome.Show();*/
+        }
+
+        bool isValidToLogin()
+        {
+            if (String.IsNullOrEmpty(emailLogin.Text) || String.IsNullOrWhiteSpace(passLogin.Text))
+            {
+                return false;
+            }
+            return true;
         }
 
         private void gunaTextBox1_TextChanged(object sender, EventArgs e)
