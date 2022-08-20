@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aboutUsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutUsForm.Designer.cs">
+      <DependentUpon>aboutUsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminAddDoctors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     <Compile Include="userSelectDoctor.Designer.cs">
       <DependentUpon>userSelectDoctor.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="aboutUsForm.resx">
+      <DependentUpon>aboutUsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminAddDoctors.resx">
       <DependentUpon>adminAddDoctors.cs</DependentUpon>
     </EmbeddedResource>

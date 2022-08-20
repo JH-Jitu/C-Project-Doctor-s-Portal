@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +16,7 @@ namespace DOCTORS_PORTAL
         public registrationForm()
         {
             InitializeComponent();
+            rightEmail.Text = "";
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
@@ -40,6 +42,106 @@ namespace DOCTORS_PORTAL
             this.Hide();
             loginForm loginForm = new loginForm();
             loginForm.Show();
+        }
+
+        private void registrationBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void nameTextBoxReg_Enter(object sender, EventArgs e)
+        {
+            if(nameTextBoxReg.Text == "Enter Name")
+            {
+                nameTextBoxReg.Text = "";
+                nameTextBoxReg.ForeColor = Color.Black;
+            }
+        }
+
+        private void nameTextBoxReg_Leave(object sender, EventArgs e)
+        {
+            if (nameTextBoxReg.Text == "")
+            {
+                nameTextBoxReg.Text = "Enter Name";
+                nameTextBoxReg.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void emailTextBoxReg_Enter(object sender, EventArgs e)
+        {
+            if (emailTextBoxReg.Text == "someone@example.com")
+            {
+                emailTextBoxReg.Text = "";
+                emailTextBoxReg.ForeColor = Color.Black;
+            }
+        }
+
+        private void emailTextBoxReg_Leave(object sender, EventArgs e)
+        {
+            if (emailTextBoxReg.Text == "")
+            {
+                emailTextBoxReg.Text = "someone@example.com";
+                emailTextBoxReg.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void emailTextBoxReg_TextChanged(object sender, EventArgs e)
+        {
+            string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+            if (!Regex.IsMatch(emailTextBoxReg.Text, pattern))
+            {
+                rightEmail.Text = "❌";
+            }
+            else
+            {
+                rightEmail.Text = "✔️";
+            }
+        }
+
+        private void passTextBoxReg_Enter(object sender, EventArgs e)
+        {
+            if (passTextBoxReg.Text == "Enter Password")
+            {
+                passTextBoxReg.Text = "";
+                passTextBoxReg.PasswordChar = '●';
+                passTextBoxReg.ForeColor = Color.Black;
+            }
+        }
+
+        private void passTextBoxReg_Leave(object sender, EventArgs e)
+        {
+            if (passTextBoxReg.Text == "Enter Password")
+            {
+                passTextBoxReg.Text = "";
+                passTextBoxReg.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void rightEmail_Click(object sender, EventArgs e)
+        {
+            if(rightEmail.Text == "❌")
+            {
+                emailTextBoxReg.Text = "";
+            }
+        }
+
+        private void rightEmail_MouseHover(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void eyeOpen_Click(object sender, EventArgs e)
+        {
+            hide.Show();
+            show.Hide();
+            passTextBoxReg.PasswordChar = '\0';
+        }
+
+        private void eyeClose_Click(object sender, EventArgs e)
+        {
+            hide.Hide();
+            show.Show();
+            passTextBoxReg.PasswordChar = '●';
         }
     }
 }
