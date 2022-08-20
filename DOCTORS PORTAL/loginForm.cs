@@ -103,7 +103,7 @@ namespace DOCTORS_PORTAL
         private void gunaTextBox1_TextChanged(object sender, EventArgs e)
         {
             string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
-            if (!Regex.IsMatch(emailLogin.Text, pattern))
+            if (!Regex.IsMatch(emailLogin.Text, pattern) || emailLogin.Text == "")
             {
                 rightEmail.Text = "❌";
             } else
@@ -141,6 +141,7 @@ namespace DOCTORS_PORTAL
             {
                 emailLogin.Text = "someone@example.com";
                 emailLogin.ForeColor = Color.LightGray;
+                rightEmail.Text = "❌";
             }
         }
 

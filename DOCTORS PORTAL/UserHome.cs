@@ -13,8 +13,7 @@ namespace DOCTORS_PORTAL
     public partial class UserHome : Form
     {
         userSelectDoctor userSelectDoctor = new userSelectDoctor();
-        userDashboard userDashboard = new userDashboard();
-        private DataSet dsObj;
+        private DataSet dsObj { get; set; }
 
         private DataAccess Da { get; set; }
 
@@ -24,7 +23,7 @@ namespace DOCTORS_PORTAL
             InitializeComponent();
 
             Da = new DataAccess();
-            
+
         }
         
 
@@ -55,8 +54,11 @@ namespace DOCTORS_PORTAL
 
         private void dashboardBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
+            userDashboard userDashboard = new userDashboard(dsObj);
             userDashboard.Show();
+
+            this.Hide();
         }
 
         private void aboutBtn_Click(object sender, EventArgs e)

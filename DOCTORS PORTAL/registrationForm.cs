@@ -152,13 +152,14 @@ namespace DOCTORS_PORTAL
             {
                 emailTextBoxReg.Text = "someone@example.com";
                 emailTextBoxReg.ForeColor = Color.LightGray;
+                rightEmail.Text = "❌";
             }
         }
 
         private void emailTextBoxReg_TextChanged(object sender, EventArgs e)
         {
             string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
-            if (!Regex.IsMatch(emailTextBoxReg.Text, pattern))
+            if (!Regex.IsMatch(emailTextBoxReg.Text, pattern) || emailTextBoxReg.Text == "")
             {
                 rightEmail.Text = "❌";
             }
