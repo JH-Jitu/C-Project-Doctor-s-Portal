@@ -16,5 +16,16 @@ namespace DOCTORS_PORTAL
         {
             InitializeComponent();
         }
+
+        private void dhakaBtn_Click(object sender, EventArgs e)
+        {
+            /*UserHome userHomeObj = new UserHome();
+            this.Hide();
+            userSelectDoctorSection userSelectDoctorSectionObj = new userSelectDoctorSection();
+            userSelectDoctorSectionObj.Show();*/
+
+            /*userHomeSection userHomeSectionObj = new userHomeSection();
+            userHomeSectionObj.Visible = false;*/
+        }
     }
 }

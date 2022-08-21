@@ -1,14 +1,14 @@
 ﻿
 namespace DOCTORS_PORTAL
 {
-    partial class userHomeSection
+    partial class HomeSectionTest
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -21,10 +21,10 @@ namespace DOCTORS_PORTAL
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -38,14 +38,14 @@ namespace DOCTORS_PORTAL
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaElipsePanel3 = new Guna.UI.WinForms.GunaElipsePanel();
             this.calendar = new System.Windows.Forms.MonthCalendar();
-            this.gunaElipsePanel4 = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaElipsePanel5 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.gunaAnimateWindow1 = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaElipsePanel4 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.gunaAnimateWindow1 = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
             this.gunaElipsePanel3.SuspendLayout();
-            this.gunaElipsePanel4.SuspendLayout();
             this.gunaElipsePanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
+            this.gunaElipsePanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaButton3
@@ -163,7 +163,6 @@ namespace DOCTORS_PORTAL
             this.dhakaBtn.TabIndex = 2;
             this.dhakaBtn.Text = "DHAKA";
             this.dhakaBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dhakaBtn.Click += new System.EventHandler(this.dhakaBtn_Click);
             // 
             // gunaLabel3
             // 
@@ -197,11 +196,11 @@ namespace DOCTORS_PORTAL
             this.gunaElipsePanel3.Controls.Add(this.dhakaBtn);
             this.gunaElipsePanel3.Controls.Add(this.gunaLabel3);
             this.gunaElipsePanel3.Controls.Add(this.gunaLabel2);
-            this.gunaElipsePanel3.Location = new System.Drawing.Point(40, 20);
+            this.gunaElipsePanel3.Location = new System.Drawing.Point(40, 32);
             this.gunaElipsePanel3.Name = "gunaElipsePanel3";
             this.gunaElipsePanel3.Radius = 10;
             this.gunaElipsePanel3.Size = new System.Drawing.Size(640, 170);
-            this.gunaElipsePanel3.TabIndex = 2;
+            this.gunaElipsePanel3.TabIndex = 5;
             // 
             // calendar
             // 
@@ -214,35 +213,17 @@ namespace DOCTORS_PORTAL
             this.calendar.TitleForeColor = System.Drawing.Color.White;
             this.calendar.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(27)))), ((int)(((byte)(151)))));
             // 
-            // gunaElipsePanel4
-            // 
-            this.gunaElipsePanel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaElipsePanel4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(7)))), ((int)(((byte)(94)))));
-            this.gunaElipsePanel4.Controls.Add(this.calendar);
-            this.gunaElipsePanel4.Location = new System.Drawing.Point(40, 210);
-            this.gunaElipsePanel4.Name = "gunaElipsePanel4";
-            this.gunaElipsePanel4.Radius = 10;
-            this.gunaElipsePanel4.Size = new System.Drawing.Size(310, 260);
-            this.gunaElipsePanel4.TabIndex = 3;
-            // 
             // gunaElipsePanel5
             // 
             this.gunaElipsePanel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gunaElipsePanel5.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(7)))), ((int)(((byte)(94)))));
             this.gunaElipsePanel5.Controls.Add(this.gunaPictureBox1);
-            this.gunaElipsePanel5.Location = new System.Drawing.Point(365, 210);
+            this.gunaElipsePanel5.Location = new System.Drawing.Point(365, 222);
             this.gunaElipsePanel5.Name = "gunaElipsePanel5";
             this.gunaElipsePanel5.Radius = 10;
             this.gunaElipsePanel5.Size = new System.Drawing.Size(315, 260);
-            this.gunaElipsePanel5.TabIndex = 4;
-            // 
-            // gunaAnimateWindow1
-            // 
-            this.gunaAnimateWindow1.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_SLIDE;
-            this.gunaAnimateWindow1.Interval = 100;
-            this.gunaAnimateWindow1.TargetControl = null;
+            this.gunaElipsePanel5.TabIndex = 7;
             // 
             // gunaPictureBox1
             // 
@@ -255,23 +236,39 @@ namespace DOCTORS_PORTAL
             this.gunaPictureBox1.TabIndex = 0;
             this.gunaPictureBox1.TabStop = false;
             // 
-            // userHomeSection
+            // gunaElipsePanel4
+            // 
+            this.gunaElipsePanel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaElipsePanel4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(7)))), ((int)(((byte)(94)))));
+            this.gunaElipsePanel4.Controls.Add(this.calendar);
+            this.gunaElipsePanel4.Location = new System.Drawing.Point(40, 222);
+            this.gunaElipsePanel4.Name = "gunaElipsePanel4";
+            this.gunaElipsePanel4.Radius = 10;
+            this.gunaElipsePanel4.Size = new System.Drawing.Size(310, 260);
+            this.gunaElipsePanel4.TabIndex = 6;
+            // 
+            // gunaAnimateWindow1
+            // 
+            this.gunaAnimateWindow1.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_SLIDE;
+            this.gunaAnimateWindow1.Interval = 100;
+            this.gunaAnimateWindow1.TargetControl = null;
+            // 
+            // HomeSectionTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(6)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(720, 515);
+            this.Controls.Add(this.gunaElipsePanel3);
             this.Controls.Add(this.gunaElipsePanel5);
             this.Controls.Add(this.gunaElipsePanel4);
-            this.Controls.Add(this.gunaElipsePanel3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "userHomeSection";
-            this.Text = "userHomeSection";
+            this.Name = "HomeSectionTest";
+            this.Size = new System.Drawing.Size(720, 515);
             this.gunaElipsePanel3.ResumeLayout(false);
             this.gunaElipsePanel3.PerformLayout();
-            this.gunaElipsePanel4.ResumeLayout(false);
             this.gunaElipsePanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
+            this.gunaElipsePanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -286,9 +283,9 @@ namespace DOCTORS_PORTAL
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel3;
         private System.Windows.Forms.MonthCalendar calendar;
-        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel4;
-        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel5;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
+        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel4;
         private Guna.UI.WinForms.GunaAnimateWindow gunaAnimateWindow1;
     }
 }

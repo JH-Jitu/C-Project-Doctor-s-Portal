@@ -25,9 +25,8 @@ namespace DOCTORS_PORTAL
         {
             InitializeComponent();
             this.dsObj = dsObj;
-            showEmail.Text = dsObj.Tables[0].Rows[0]["email"].ToString();
-            showName.Text = dsObj.Tables[0].Rows[0]["name"].ToString();
-
+            //showEmail.Text = dsObj.Tables[0].Rows[0]["email"].ToString();
+            //showName.Text = dsObj.Tables[0].Rows[0]["name"].ToString();
         }
 
 

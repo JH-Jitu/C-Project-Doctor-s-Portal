@@ -116,6 +116,12 @@
     <Compile Include="doctorsDashboard.Designer.cs">
       <DependentUpon>doctorsDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeSectionTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomeSectionTest.Designer.cs">
+      <DependentUpon>HomeSectionTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     </Compile>
     <Compile Include="userDashboard.Designer.cs">
       <DependentUpon>userDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userDashboardSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userDashboardSection.Designer.cs">
+      <DependentUpon>userDashboardSection.cs</DependentUpon>
     </Compile>
     <Compile Include="userDoctorDetails.cs">
       <SubType>Form</SubType>
@@ -172,6 +184,12 @@
     <Compile Include="userSelectDoctor.Designer.cs">
       <DependentUpon>userSelectDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="userSelectDoctorSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userSelectDoctorSection.Designer.cs">
+      <DependentUpon>userSelectDoctorSection.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="aboutUsForm.resx">
       <DependentUpon>aboutUsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +220,9 @@
     <EmbeddedResource Include="doctorsDashboard.resx">
       <DependentUpon>doctorsDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HomeSectionTest.resx">
+      <DependentUpon>HomeSectionTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userDashboard.resx">
       <DependentUpon>userDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userDashboardSection.resx">
+      <DependentUpon>userDashboardSection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userDoctorDetails.resx">
       <DependentUpon>userDoctorDetails.cs</DependentUpon>
@@ -238,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userSelectDoctor.resx">
       <DependentUpon>userSelectDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userSelectDoctorSection.resx">
+      <DependentUpon>userSelectDoctorSection.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
