@@ -163,6 +163,7 @@ namespace DOCTORS_PORTAL
             this.dhakaBtn.TabIndex = 2;
             this.dhakaBtn.Text = "DHAKA";
             this.dhakaBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dhakaBtn.Click += new System.EventHandler(this.dhakaBtn_Click);
             // 
             // gunaLabel3
             // 

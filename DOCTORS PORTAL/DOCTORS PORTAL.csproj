@@ -184,6 +184,12 @@
     <Compile Include="userSelectDoctor.Designer.cs">
       <DependentUpon>userSelectDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="userSelectDoctorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userSelectDoctorControl.Designer.cs">
+      <DependentUpon>userSelectDoctorControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="userSelectDoctorSection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userSelectDoctor.resx">
       <DependentUpon>userSelectDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userSelectDoctorControl.resx">
+      <DependentUpon>userSelectDoctorControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userSelectDoctorSection.resx">
       <DependentUpon>userSelectDoctorSection.cs</DependentUpon>

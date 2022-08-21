@@ -45,8 +45,8 @@ namespace DOCTORS_PORTAL
 
         public DataAccess()
         {
-            this.Sqlcon = new SqlConnection("Data Source=LAPTOP-S8MUFLQQ;Initial Catalog=DoctorsPortal;Integrated Security=True");
-            Sqlcon.Open();
+            //this.Sqlcon = new SqlConnection("Data Source=LAPTOP-S8MUFLQQ;Initial Catalog=DoctorsPortal;Integrated Security=True");
+            //Sqlcon.Open();
         }
 
         private void QueryText(string query)
