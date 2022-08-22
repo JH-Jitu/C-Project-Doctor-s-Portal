@@ -31,18 +31,27 @@ namespace DOCTORS_PORTAL
         {
             this.components = new System.ComponentModel.Container();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.logoutBtn = new System.Windows.Forms.Button();
+            this.settingsBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.contactBtn = new System.Windows.Forms.Button();
+            this.aboutBtn = new System.Windows.Forms.Button();
+            this.dashboardBtn = new System.Windows.Forms.Button();
+            this.homeBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.logoText = new System.Windows.Forms.Label();
             this.LogoText2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaElipsePanel6 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.search = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
@@ -55,23 +64,14 @@ namespace DOCTORS_PORTAL
             this.gunaElipsePanel8 = new Guna.UI.WinForms.GunaElipsePanel();
             this.mainPanel = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaAnimateWindow1 = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.logoutBtn = new System.Windows.Forms.Button();
-            this.settingsBtn = new System.Windows.Forms.Button();
-            this.contactBtn = new System.Windows.Forms.Button();
-            this.aboutBtn = new System.Windows.Forms.Button();
-            this.dashboardBtn = new System.Windows.Forms.Button();
-            this.homeBtn = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gunaPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.gunaElipsePanel1.SuspendLayout();
             this.gunaElipsePanel6.SuspendLayout();
-            this.gunaElipsePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gunaElipsePanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPanel1
@@ -100,6 +100,18 @@ namespace DOCTORS_PORTAL
             this.gunaPanel1.Size = new System.Drawing.Size(180, 600);
             this.gunaPanel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::DOCTORS_PORTAL.Properties.Resources.developer;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 562);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // gunaLabel1
             // 
             this.gunaLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -112,6 +124,46 @@ namespace DOCTORS_PORTAL
             this.gunaLabel1.Size = new System.Drawing.Size(128, 23);
             this.gunaLabel1.TabIndex = 15;
             this.gunaLabel1.Text = "See Developers";
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutBtn.FlatAppearance.BorderSize = 0;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.logout;
+            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutBtn.Location = new System.Drawing.Point(0, 394);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.logoutBtn.Size = new System.Drawing.Size(180, 35);
+            this.logoutBtn.TabIndex = 11;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            // 
+            // settingsBtn
+            // 
+            this.settingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.settingsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.settingsBtn.FlatAppearance.BorderSize = 0;
+            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsBtn.ForeColor = System.Drawing.Color.White;
+            this.settingsBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.settings;
+            this.settingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingsBtn.Location = new System.Drawing.Point(0, 353);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.settingsBtn.Size = new System.Drawing.Size(180, 35);
+            this.settingsBtn.TabIndex = 11;
+            this.settingsBtn.Text = "Settings";
+            this.settingsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.settingsBtn.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -137,6 +189,90 @@ namespace DOCTORS_PORTAL
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(180, 30);
             this.panel2.TabIndex = 12;
+            // 
+            // contactBtn
+            // 
+            this.contactBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contactBtn.FlatAppearance.BorderSize = 0;
+            this.contactBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contactBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactBtn.ForeColor = System.Drawing.Color.White;
+            this.contactBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.contact;
+            this.contactBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.contactBtn.Location = new System.Drawing.Point(0, 258);
+            this.contactBtn.Name = "contactBtn";
+            this.contactBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.contactBtn.Size = new System.Drawing.Size(180, 35);
+            this.contactBtn.TabIndex = 11;
+            this.contactBtn.Text = "Contact";
+            this.contactBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.contactBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.contactBtn.UseVisualStyleBackColor = true;
+            this.contactBtn.Click += new System.EventHandler(this.contactBtn_Click);
+            this.contactBtn.Leave += new System.EventHandler(this.contactBtn_Leave);
+            // 
+            // aboutBtn
+            // 
+            this.aboutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.aboutBtn.FlatAppearance.BorderSize = 0;
+            this.aboutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aboutBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutBtn.ForeColor = System.Drawing.Color.White;
+            this.aboutBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.about;
+            this.aboutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.aboutBtn.Location = new System.Drawing.Point(0, 217);
+            this.aboutBtn.Name = "aboutBtn";
+            this.aboutBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.aboutBtn.Size = new System.Drawing.Size(180, 35);
+            this.aboutBtn.TabIndex = 11;
+            this.aboutBtn.Text = "About Us";
+            this.aboutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.aboutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.aboutBtn.UseVisualStyleBackColor = true;
+            this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
+            this.aboutBtn.Leave += new System.EventHandler(this.aboutBtn_Leave);
+            // 
+            // dashboardBtn
+            // 
+            this.dashboardBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashboardBtn.FlatAppearance.BorderSize = 0;
+            this.dashboardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboardBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardBtn.ForeColor = System.Drawing.Color.White;
+            this.dashboardBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.dashboard;
+            this.dashboardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboardBtn.Location = new System.Drawing.Point(0, 176);
+            this.dashboardBtn.Name = "dashboardBtn";
+            this.dashboardBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.dashboardBtn.Size = new System.Drawing.Size(180, 35);
+            this.dashboardBtn.TabIndex = 11;
+            this.dashboardBtn.Text = "Dashboard";
+            this.dashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.dashboardBtn.UseVisualStyleBackColor = true;
+            this.dashboardBtn.Click += new System.EventHandler(this.dashboardBtn_Click);
+            this.dashboardBtn.Leave += new System.EventHandler(this.dashboardBtn_Leave);
+            // 
+            // homeBtn
+            // 
+            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeBtn.FlatAppearance.BorderSize = 0;
+            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeBtn.ForeColor = System.Drawing.Color.White;
+            this.homeBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.home1;
+            this.homeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.homeBtn.Location = new System.Drawing.Point(0, 135);
+            this.homeBtn.Name = "homeBtn";
+            this.homeBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.homeBtn.Size = new System.Drawing.Size(180, 35);
+            this.homeBtn.TabIndex = 11;
+            this.homeBtn.Text = "Home";
+            this.homeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.homeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.homeBtn.UseVisualStyleBackColor = true;
+            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
+            this.homeBtn.Leave += new System.EventHandler(this.homeBtn_Leave);
             // 
             // panel1
             // 
@@ -171,6 +307,17 @@ namespace DOCTORS_PORTAL
             this.LogoText2.TabIndex = 4;
             this.LogoText2.Text = "PORTAL";
             this.LogoText2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DOCTORS_PORTAL.Properties.Resources.logoLight;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 31);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(44, 42);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // panel3
             // 
@@ -219,6 +366,16 @@ namespace DOCTORS_PORTAL
             this.gunaElipsePanel6.Name = "gunaElipsePanel6";
             this.gunaElipsePanel6.Size = new System.Drawing.Size(240, 30);
             this.gunaElipsePanel6.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DOCTORS_PORTAL.Properties.Resources.search;
+            this.pictureBox3.Location = new System.Drawing.Point(214, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // search
             // 
@@ -404,163 +561,6 @@ namespace DOCTORS_PORTAL
             this.gunaAnimateWindow1.Interval = 100;
             this.gunaAnimateWindow1.TargetControl = null;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DOCTORS_PORTAL.Properties.Resources.search;
-            this.pictureBox3.Location = new System.Drawing.Point(214, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::DOCTORS_PORTAL.Properties.Resources.developer;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 562);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
-            // logoutBtn
-            // 
-            this.logoutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutBtn.FlatAppearance.BorderSize = 0;
-            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.logout;
-            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutBtn.Location = new System.Drawing.Point(0, 394);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.logoutBtn.Size = new System.Drawing.Size(180, 35);
-            this.logoutBtn.TabIndex = 11;
-            this.logoutBtn.Text = "Logout";
-            this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.logoutBtn.UseVisualStyleBackColor = true;
-            // 
-            // settingsBtn
-            // 
-            this.settingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.settingsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.settingsBtn.FlatAppearance.BorderSize = 0;
-            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsBtn.ForeColor = System.Drawing.Color.White;
-            this.settingsBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.settings;
-            this.settingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsBtn.Location = new System.Drawing.Point(0, 353);
-            this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.settingsBtn.Size = new System.Drawing.Size(180, 35);
-            this.settingsBtn.TabIndex = 11;
-            this.settingsBtn.Text = "Settings";
-            this.settingsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.settingsBtn.UseVisualStyleBackColor = true;
-            // 
-            // contactBtn
-            // 
-            this.contactBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.contactBtn.FlatAppearance.BorderSize = 0;
-            this.contactBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.contactBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactBtn.ForeColor = System.Drawing.Color.White;
-            this.contactBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.contact;
-            this.contactBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.contactBtn.Location = new System.Drawing.Point(0, 258);
-            this.contactBtn.Name = "contactBtn";
-            this.contactBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.contactBtn.Size = new System.Drawing.Size(180, 35);
-            this.contactBtn.TabIndex = 11;
-            this.contactBtn.Text = "Contact";
-            this.contactBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.contactBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.contactBtn.UseVisualStyleBackColor = true;
-            this.contactBtn.Click += new System.EventHandler(this.contactBtn_Click);
-            this.contactBtn.Leave += new System.EventHandler(this.contactBtn_Leave);
-            // 
-            // aboutBtn
-            // 
-            this.aboutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.aboutBtn.FlatAppearance.BorderSize = 0;
-            this.aboutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aboutBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutBtn.ForeColor = System.Drawing.Color.White;
-            this.aboutBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.about;
-            this.aboutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.aboutBtn.Location = new System.Drawing.Point(0, 217);
-            this.aboutBtn.Name = "aboutBtn";
-            this.aboutBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.aboutBtn.Size = new System.Drawing.Size(180, 35);
-            this.aboutBtn.TabIndex = 11;
-            this.aboutBtn.Text = "About Us";
-            this.aboutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.aboutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.aboutBtn.UseVisualStyleBackColor = true;
-            this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
-            this.aboutBtn.Leave += new System.EventHandler(this.aboutBtn_Leave);
-            // 
-            // dashboardBtn
-            // 
-            this.dashboardBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashboardBtn.FlatAppearance.BorderSize = 0;
-            this.dashboardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboardBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboardBtn.ForeColor = System.Drawing.Color.White;
-            this.dashboardBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.dashboard;
-            this.dashboardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboardBtn.Location = new System.Drawing.Point(0, 176);
-            this.dashboardBtn.Name = "dashboardBtn";
-            this.dashboardBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.dashboardBtn.Size = new System.Drawing.Size(180, 35);
-            this.dashboardBtn.TabIndex = 11;
-            this.dashboardBtn.Text = "Dashboard";
-            this.dashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.dashboardBtn.UseVisualStyleBackColor = true;
-            this.dashboardBtn.Click += new System.EventHandler(this.dashboardBtn_Click);
-            this.dashboardBtn.Leave += new System.EventHandler(this.dashboardBtn_Leave);
-            // 
-            // homeBtn
-            // 
-            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeBtn.FlatAppearance.BorderSize = 0;
-            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeBtn.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeBtn.ForeColor = System.Drawing.Color.White;
-            this.homeBtn.Image = global::DOCTORS_PORTAL.Properties.Resources.home1;
-            this.homeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeBtn.Location = new System.Drawing.Point(0, 135);
-            this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.homeBtn.Size = new System.Drawing.Size(180, 35);
-            this.homeBtn.TabIndex = 11;
-            this.homeBtn.Text = "Home";
-            this.homeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.homeBtn.UseVisualStyleBackColor = true;
-            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
-            this.homeBtn.Leave += new System.EventHandler(this.homeBtn_Leave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DOCTORS_PORTAL.Properties.Resources.logoLight;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 31);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 42);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // UserHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,15 +582,15 @@ namespace DOCTORS_PORTAL
             this.Load += new System.EventHandler(this.UserHome_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.gunaElipsePanel1.ResumeLayout(false);
             this.gunaElipsePanel1.PerformLayout();
             this.gunaElipsePanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.gunaElipsePanel2.ResumeLayout(false);
             this.gunaElipsePanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -140,6 +140,18 @@
     <Compile Include="settings.Designer.cs">
       <DependentUpon>settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="showAllChambersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="showAllChambersControl.Designer.cs">
+      <DependentUpon>showAllChambersControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="showDoctor.Designer.cs">
+      <DependentUpon>showDoctor.cs</DependentUpon>
+    </Compile>
     <Compile Include="userDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,8 +250,14 @@
     <EmbeddedResource Include="settings.resx">
       <DependentUpon>settings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="showAllChambersControl.resx">
+      <DependentUpon>showAllChambersControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userBookAppointment.resx">
       <DependentUpon>userBookAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showDoctor.resx">
+      <DependentUpon>showDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userDashboard.resx">
       <DependentUpon>userDashboard.cs</DependentUpon>

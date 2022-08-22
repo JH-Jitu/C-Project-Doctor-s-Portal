@@ -41,6 +41,11 @@ namespace DOCTORS_PORTAL
 
             Da = new DataAccess();
 
+            HomeSectionTest userHomeSectionObj = new HomeSectionTest(MainPanel);
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(userHomeSectionObj);
+            userHomeSectionObj.Show();
+
         }
         
         public UserHome(DataSet dsObj)
@@ -72,7 +77,7 @@ namespace DOCTORS_PORTAL
             // loadform(new userSelectDoctorSection());
             // loadform(new userHomeSection());
 
-            HomeSectionTest userHomeSectionObj = new HomeSectionTest();
+            HomeSectionTest userHomeSectionObj = new HomeSectionTest(MainPanel);
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(userHomeSectionObj);
             userHomeSectionObj.Show();

@@ -132,8 +132,9 @@ namespace DOCTORS_PORTAL
             this.gunaButton1.Radius = 10;
             this.gunaButton1.Size = new System.Drawing.Size(142, 45);
             this.gunaButton1.TabIndex = 2;
-            this.gunaButton1.Text = "CHOTTOGRAM";
+            this.gunaButton1.Text = "CHITTAGONG";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // dhakaBtn
             // 

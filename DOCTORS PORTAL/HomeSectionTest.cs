@@ -13,32 +13,44 @@ namespace DOCTORS_PORTAL
 {
     public partial class HomeSectionTest : UserControl
     {
-        /*public GunaElipsePanel MainPanel
-        {
-            get { return mainPanel; }
-            set { }
-        }*/
+        private Panel mainPanel;
+
         public HomeSectionTest()
         {
             InitializeComponent();
         }
 
-        /*public HomeSectionTest(GunaElipsePanel mainPanel)
+        public HomeSectionTest(Panel mainPanel)
         {
-            MainPanel = mainPanel;
-        }*/
+            InitializeComponent();
 
-        public GunaElipsePanel MainPanel { get; }
+            this.mainPanel = mainPanel;
+        }
 
         private void dhakaBtn_Click(object sender, EventArgs e)
         {
             UserHome userHomeObj = new UserHome();
 
-            userSelectDoctorControl userSelectDoctorControlObj = new userSelectDoctorControl();
-            userHomeObj.MainPanel.Controls.Clear();
-            userHomeObj.MainPanel.Controls.Add(userSelectDoctorControlObj);
-            userSelectDoctorControlObj.Show();
+            // navigation
+            userSelectDoctorControl userSelectDoctorControlObj = new userSelectDoctorControl(mainPanel, "Dhaka");
+            mainPanel.Controls.Add(userSelectDoctorControlObj);
+            mainPanel.Controls.Remove(this);
             Hide();
+
+            userSelectDoctorControlObj.Show();
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            UserHome userHomeObj = new UserHome();
+
+            // navigation
+            userSelectDoctorControl userSelectDoctorControlObj = new userSelectDoctorControl(mainPanel, "Chittagong");
+            mainPanel.Controls.Add(userSelectDoctorControlObj);
+            mainPanel.Controls.Remove(this);
+            Hide();
+
+            userSelectDoctorControlObj.Show();
         }
     }
 }

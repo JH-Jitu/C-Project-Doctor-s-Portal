@@ -54,6 +54,7 @@ namespace DOCTORS_PORTAL
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rightEmail = new System.Windows.Forms.Label();
             this.emailTextBoxReg = new Guna.UI.WinForms.GunaTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -63,7 +64,6 @@ namespace DOCTORS_PORTAL
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.rightEmail = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -422,6 +422,18 @@ namespace DOCTORS_PORTAL
             this.panel1.Size = new System.Drawing.Size(400, 40);
             this.panel1.TabIndex = 60;
             // 
+            // rightEmail
+            // 
+            this.rightEmail.AutoSize = true;
+            this.rightEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rightEmail.Location = new System.Drawing.Point(373, 9);
+            this.rightEmail.Name = "rightEmail";
+            this.rightEmail.Size = new System.Drawing.Size(21, 20);
+            this.rightEmail.TabIndex = 67;
+            this.rightEmail.Text = "R";
+            this.rightEmail.Click += new System.EventHandler(this.rightEmail_Click);
+            this.rightEmail.MouseHover += new System.EventHandler(this.rightEmail_MouseHover);
+            // 
             // emailTextBoxReg
             // 
             this.emailTextBoxReg.BaseColor = System.Drawing.Color.White;
@@ -529,18 +541,6 @@ namespace DOCTORS_PORTAL
             this.gunaLabel1.Size = new System.Drawing.Size(325, 59);
             this.gunaLabel1.TabIndex = 66;
             this.gunaLabel1.Text = "Please Register";
-            // 
-            // rightEmail
-            // 
-            this.rightEmail.AutoSize = true;
-            this.rightEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightEmail.Location = new System.Drawing.Point(373, 9);
-            this.rightEmail.Name = "rightEmail";
-            this.rightEmail.Size = new System.Drawing.Size(21, 20);
-            this.rightEmail.TabIndex = 67;
-            this.rightEmail.Text = "R";
-            this.rightEmail.Click += new System.EventHandler(this.rightEmail_Click);
-            this.rightEmail.MouseHover += new System.EventHandler(this.rightEmail_MouseHover);
             // 
             // registrationForm
             // 
