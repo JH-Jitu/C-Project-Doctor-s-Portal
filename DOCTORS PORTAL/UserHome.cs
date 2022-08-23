@@ -94,7 +94,10 @@ namespace DOCTORS_PORTAL
             pnlNav.Top = dashboardBtn.Top;
             dashboardBtn.BackColor = Color.FromArgb(75, 27, 151);
 
-           // loadform(new userDashboardSection());
+            userDashboardControl userDashboardControlObj = new userDashboardControl(MainPanel);
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(userDashboardControlObj);
+            userDashboardControlObj.Show();
         }
 
         private void aboutBtn_Click(object sender, EventArgs e)

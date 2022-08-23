@@ -158,6 +158,12 @@
     <Compile Include="userDashboard.Designer.cs">
       <DependentUpon>userDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="userDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userDashboardControl.Designer.cs">
+      <DependentUpon>userDashboardControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="userDashboardSection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userDashboard.resx">
       <DependentUpon>userDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userDashboardControl.resx">
+      <DependentUpon>userDashboardControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userDashboardSection.resx">
       <DependentUpon>userDashboardSection.cs</DependentUpon>

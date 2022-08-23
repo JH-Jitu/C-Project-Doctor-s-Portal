@@ -65,7 +65,7 @@ namespace DOCTORS_PORTAL
 
                 //MessageBox.Show(ds.Tables[0].Rows[0]["id"].ToString());
 
-                if(ds.Tables[0].Rows[0]["email"].ToString() == emailLogin.Text || ds.Tables[0].Rows[0]["password"].ToString() == passLogin.Text)
+                if(ds.Tables[0].Rows[0]["email"].ToString() == emailLogin.Text && ds.Tables[0].Rows[0]["password"].ToString() == passLogin.Text)
                 {
                     UserHome userHomeObj = new UserHome(ds);
                     userDashboard userDashboardObj = new userDashboard(ds);

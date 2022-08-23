@@ -109,6 +109,8 @@ namespace DOCTORS_PORTAL
             DataSet dsForShowDocs = Da.ExecuteQuery(sqlForShowDocs);
             /*MessageBox.Show(dsForShowDocs.Tables[0].Rows[1]["Name"].ToString());*/
 
+            //MessageBox.Show(sqlForShowDocs);
+
             showDoctorPanel.Controls.Clear();
 
             if (totalDoctors - lowerLimit == 0)
@@ -218,9 +220,10 @@ namespace DOCTORS_PORTAL
 
         private void filterBox_TextChanged(object sender, EventArgs e)
         {
-            getSQLInformation(chamberEmail, chamberName);
 
             selCategory = filterBox.Text;
+            getSQLInformation(chamberEmail, chamberName);
+
         }
     }
 }
