@@ -18,10 +18,12 @@ namespace DOCTORS_PORTAL
         private string city;
         private string extraQueryForChamber ="";
         string chamberName = "";
+        string selCategory = "";
         int lowerLimit;
         int upperLimit;
         int totalDoctors;
         int pageCount;
+        private string chamberEmail;
 
         public userSelectDoctorControl()
         {
@@ -47,6 +49,7 @@ namespace DOCTORS_PORTAL
         public void getSQLInformation(string chamberEmail, string chamberName)
         {
             this.chamberName = chamberName;
+            labelCham.Text = chamberName;
             try
             {
                 Da = new DataAccess();
@@ -54,6 +57,7 @@ namespace DOCTORS_PORTAL
                 // Check for chamber selection
                 if (chamberEmail != "")
                 {
+                    this.chamberEmail = chamberEmail;
                     extraQueryForChamber = " and ChamberEmail='" + chamberEmail + "'";
                     
                 }
@@ -62,14 +66,28 @@ namespace DOCTORS_PORTAL
                     extraQueryForChamber = "";
                 }
 
+                // Check Category
+                if(filterBox.Text == "ALL")
+                {
+                    selCategory = "";
+                } else
+                {
+                    selCategory = " and Category='" + filterBox.Text + "'";
+
+                }
+
                 // SQL for doctors count
-                string sql = "SELECT COUNT(*) as countDoctors FROM [DoctorsPortal].[dbo].[doctors] where city='" + city + "'  " + extraQueryForChamber + ";";
+                string sql = "SELECT COUNT(*) as countDoctors FROM [DoctorsPortal].[dbo].[doctors] where city='" + city + "'  " + extraQueryForChamber + " " + selCategory + "";
+                //MessageBox.Show(sql);
                 DataSet ds = Da.ExecuteQuery(sql);
                 doctorsCount.Text = ds.Tables[0].Rows[0]["countDoctors"].ToString();
                 totalDoctors = Int32.Parse(doctorsCount.Text);
                 lowerLimit = 0;
                 upperLimit = 2;
                 pageCount = 1;
+
+                // 
+                
 
                 // SQL for getting all doctors
                 getAllDoctorInformation();
@@ -86,7 +104,7 @@ namespace DOCTORS_PORTAL
         {
             
 
-            string sqlForShowDocs = "SELECT [Name], [Email], [City], [Category], [ImageLink] FROM [DoctorsPortal].[dbo].[doctors] where city='" + city + "' " + extraQueryForChamber + " order by id";
+            string sqlForShowDocs = "SELECT [Name], [Email], [City], [Category], [ImageLink] FROM [DoctorsPortal].[dbo].[doctors] where city='" + city + "' " + extraQueryForChamber + " " + selCategory + " order by id";
             DataSet dsForShowDocs = Da.ExecuteQuery(sqlForShowDocs);
             /*MessageBox.Show(dsForShowDocs.Tables[0].Rows[1]["Name"].ToString());*/
 
@@ -190,6 +208,13 @@ namespace DOCTORS_PORTAL
         private void showAllDocBtn_Click(object sender, EventArgs e)
         {
             getSQLInformation("", "");
+        }
+
+        private void filterBox_TextChanged(object sender, EventArgs e)
+        {
+            getSQLInformation(chamberEmail, chamberName);
+
+            selCategory = filterBox.Text;
         }
     }
 }

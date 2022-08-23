@@ -37,7 +37,6 @@ namespace DOCTORS_PORTAL
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.showAllChams = new System.Windows.Forms.FlowLayoutPanel();
             this.showAllDocBtn = new Guna.UI.WinForms.GunaButton();
-            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
             this.filterBox = new Guna.UI.WinForms.GunaComboBox();
             this.gunaElipsePanel3 = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
@@ -45,6 +44,7 @@ namespace DOCTORS_PORTAL
             this.NextDocBtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.PreviousDocBtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.mainPanel = new Guna.UI.WinForms.GunaElipsePanel();
+            this.labelCham = new System.Windows.Forms.Label();
             this.gunaElipsePanel1.SuspendLayout();
             this.gunaElipsePanel3.SuspendLayout();
             this.gunaElipsePanel2.SuspendLayout();
@@ -151,34 +151,6 @@ namespace DOCTORS_PORTAL
             this.showAllDocBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.showAllDocBtn.Click += new System.EventHandler(this.showAllDocBtn_Click);
             // 
-            // gunaComboBox1
-            // 
-            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(27)))), ((int)(((byte)(151)))));
-            this.gunaComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox1.BorderSize = 0;
-            this.gunaComboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaComboBox1.DisplayMember = "adjshak";
-            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox1.Font = new System.Drawing.Font("Calibri", 12F);
-            this.gunaComboBox1.ForeColor = System.Drawing.Color.White;
-            this.gunaComboBox1.FormattingEnabled = true;
-            this.gunaComboBox1.Items.AddRange(new object[] {
-            "Shohan",
-            "Rhyme",
-            "Jitu"});
-            this.gunaComboBox1.Location = new System.Drawing.Point(219, 8);
-            this.gunaComboBox1.MaxDropDownItems = 10;
-            this.gunaComboBox1.Name = "gunaComboBox1";
-            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(7)))), ((int)(((byte)(94)))));
-            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox1.Radius = 5;
-            this.gunaComboBox1.Size = new System.Drawing.Size(200, 28);
-            this.gunaComboBox1.TabIndex = 4;
-            this.gunaComboBox1.Tag = "Short";
-            // 
             // filterBox
             // 
             this.filterBox.BackColor = System.Drawing.Color.Transparent;
@@ -193,9 +165,18 @@ namespace DOCTORS_PORTAL
             this.filterBox.ForeColor = System.Drawing.Color.White;
             this.filterBox.FormattingEnabled = true;
             this.filterBox.Items.AddRange(new object[] {
-            "Shohan",
-            "Rhyme",
-            "Jitu"});
+            "ALL",
+            "Medicine",
+            "Child Expert",
+            "Radiologist",
+            "Cardiologist",
+            "Gynecologist",
+            "Pediatrician",
+            "Oncologist",
+            "ENT Specialist",
+            "Neurosurgeon",
+            "Arthritis, Rheumatism, Pain, Paralysis Specialist",
+            "Orthopedics Specialist"});
             this.filterBox.Location = new System.Drawing.Point(9, 8);
             this.filterBox.MaxDropDownItems = 10;
             this.filterBox.Name = "filterBox";
@@ -203,15 +184,17 @@ namespace DOCTORS_PORTAL
             this.filterBox.OnHoverItemForeColor = System.Drawing.Color.White;
             this.filterBox.Radius = 5;
             this.filterBox.Size = new System.Drawing.Size(200, 28);
+            this.filterBox.StartIndex = 0;
             this.filterBox.TabIndex = 4;
             this.filterBox.Tag = "Filter";
+            this.filterBox.TextChanged += new System.EventHandler(this.filterBox_TextChanged);
             // 
             // gunaElipsePanel3
             // 
             this.gunaElipsePanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gunaElipsePanel3.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(7)))), ((int)(((byte)(94)))));
-            this.gunaElipsePanel3.Controls.Add(this.gunaComboBox1);
+            this.gunaElipsePanel3.Controls.Add(this.labelCham);
             this.gunaElipsePanel3.Controls.Add(this.filterBox);
             this.gunaElipsePanel3.Location = new System.Drawing.Point(40, 20);
             this.gunaElipsePanel3.Name = "gunaElipsePanel3";
@@ -328,6 +311,17 @@ namespace DOCTORS_PORTAL
             this.mainPanel.Size = new System.Drawing.Size(720, 515);
             this.mainPanel.TabIndex = 13;
             // 
+            // labelCham
+            // 
+            this.labelCham.AutoSize = true;
+            this.labelCham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelCham.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelCham.Location = new System.Drawing.Point(292, 12);
+            this.labelCham.Name = "labelCham";
+            this.labelCham.Size = new System.Drawing.Size(86, 20);
+            this.labelCham.TabIndex = 5;
+            this.labelCham.Text = "All Doctors";
+            // 
             // userSelectDoctorControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,6 +333,7 @@ namespace DOCTORS_PORTAL
             this.gunaElipsePanel1.ResumeLayout(false);
             this.gunaElipsePanel1.PerformLayout();
             this.gunaElipsePanel3.ResumeLayout(false);
+            this.gunaElipsePanel3.PerformLayout();
             this.gunaElipsePanel2.ResumeLayout(false);
             this.gunaElipsePanel2.PerformLayout();
             this.mainPanel.ResumeLayout(false);
@@ -354,7 +349,6 @@ namespace DOCTORS_PORTAL
         private Guna.UI.WinForms.GunaVScrollBar gunaVScrollBar1;
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
         private Guna.UI.WinForms.GunaComboBox filterBox;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel3;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel2;
@@ -362,5 +356,6 @@ namespace DOCTORS_PORTAL
         private System.Windows.Forms.FlowLayoutPanel showDoctorPanel;
         private System.Windows.Forms.FlowLayoutPanel showAllChams;
         private Guna.UI.WinForms.GunaButton showAllDocBtn;
+        private System.Windows.Forms.Label labelCham;
     }
 }

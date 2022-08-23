@@ -33,8 +33,9 @@ namespace DOCTORS_PORTAL
             this.chamberEmail = chamberEmail;
         }
 
-        private void nameOfChamber_Click(object sender, EventArgs e)
+        public void nameOfChamber_Click(object sender, EventArgs e)
         {
+
             userSelectDoctorControl.getSQLInformation(chamberEmail, ChamName.Text);
         }
     }
