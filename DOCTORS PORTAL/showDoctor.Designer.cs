@@ -36,10 +36,9 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.catName = new System.Windows.Forms.Label();
             this.nameOfDoctor = new System.Windows.Forms.Label();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.doctorImagePanel = new System.Windows.Forms.Panel();
             this.gunaElipsePanel4.SuspendLayout();
             this.gunaElipsePanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipsePanel4
@@ -56,12 +55,12 @@
             // 
             this.gunaElipsePanel5.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(7)))), ((int)(((byte)(94)))));
+            this.gunaElipsePanel5.Controls.Add(this.doctorImagePanel);
             this.gunaElipsePanel5.Controls.Add(this.doctorDetailsBtn);
             this.gunaElipsePanel5.Controls.Add(this.panel7);
             this.gunaElipsePanel5.Controls.Add(this.panel6);
             this.gunaElipsePanel5.Controls.Add(this.catName);
             this.gunaElipsePanel5.Controls.Add(this.nameOfDoctor);
-            this.gunaElipsePanel5.Controls.Add(this.gunaCirclePictureBox1);
             this.gunaElipsePanel5.Location = new System.Drawing.Point(3, 3);
             this.gunaElipsePanel5.Name = "gunaElipsePanel5";
             this.gunaElipsePanel5.Radius = 5;
@@ -140,17 +139,12 @@
             this.nameOfDoctor.TabIndex = 17;
             this.nameOfDoctor.Text = "DR. MD. ISMAIL HOSSEN";
             // 
-            // gunaCirclePictureBox1
+            // doctorImagePanel
             // 
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Image = global::DOCTORS_PORTAL.Properties.Resources.Sir;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(40, 5);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(55, 55);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 0;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            this.doctorImagePanel.Location = new System.Drawing.Point(39, 9);
+            this.doctorImagePanel.Name = "doctorImagePanel";
+            this.doctorImagePanel.Size = new System.Drawing.Size(55, 55);
+            this.doctorImagePanel.TabIndex = 19;
             // 
             // showDoctor
             // 
@@ -162,7 +156,6 @@
             this.gunaElipsePanel4.ResumeLayout(false);
             this.gunaElipsePanel5.ResumeLayout(false);
             this.gunaElipsePanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -176,6 +169,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label catName;
         private System.Windows.Forms.Label nameOfDoctor;
-        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
+        private System.Windows.Forms.Panel doctorImagePanel;
     }
 }

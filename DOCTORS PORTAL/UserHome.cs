@@ -51,9 +51,14 @@ namespace DOCTORS_PORTAL
         public UserHome(DataSet dsObj)
         {
             InitializeComponent();
+            HomeSectionTest userHomeSectionObj = new HomeSectionTest(MainPanel);
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(userHomeSectionObj);
+            userHomeSectionObj.Show();
+            // From Login
             this.dsObj = dsObj;
-            //showEmail.Text = dsObj.Tables[0].Rows[0]["email"].ToString();
-            //showName.Text = dsObj.Tables[0].Rows[0]["name"].ToString();
+            showEmail.Text = dsObj.Tables[0].Rows[0]["email"].ToString();
+            showName.Text = dsObj.Tables[0].Rows[0]["name"].ToString();
             homeBtn.PerformClick();
         }
 

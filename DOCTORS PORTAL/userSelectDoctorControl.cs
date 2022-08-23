@@ -23,6 +23,7 @@ namespace DOCTORS_PORTAL
         int upperLimit;
         int totalDoctors;
         int pageCount;
+        int maxCount = 4;
         private string chamberEmail;
 
         public userSelectDoctorControl()
@@ -83,7 +84,7 @@ namespace DOCTORS_PORTAL
                 doctorsCount.Text = ds.Tables[0].Rows[0]["countDoctors"].ToString();
                 totalDoctors = Int32.Parse(doctorsCount.Text);
                 lowerLimit = 0;
-                upperLimit = 2;
+                upperLimit = maxCount;
                 pageCount = 1;
 
                 // 
@@ -123,14 +124,16 @@ namespace DOCTORS_PORTAL
 
                 // next prev color
                 //next
-                if ((pageCount * 2) >= totalDoctors)
+                //MessageBox.Show(dsForShowDocs.Tables[0].Rows[0]["ImageLink"].ToString());
+                if ((pageCount * maxCount) >= totalDoctors)
                 {
                     NextDocBtn.BaseColor = Color.FromArgb(151, 143, 255);
                     for (int i = lowerLimit; i < totalDoctors; i++)
                     {
-                        showDoctorObj[i] = new showDoctor();
+                        showDoctorObj[i] = new showDoctor(dsForShowDocs.Tables[0].Rows[i]["ImageLink"].ToString());
                         showDoctorObj[i].DocName.Text = dsForShowDocs.Tables[0].Rows[i]["Name"].ToString();
                         showDoctorObj[i].CatName.Text = dsForShowDocs.Tables[0].Rows[i]["Category"].ToString();
+                        //showDoctorObj[i].ImageLink = dsForShowDocs.Tables[0].Rows[i]["ImageLink"].ToString();
 
                         showDoctorPanel.Controls.Add(showDoctorObj[i]);
                     }
@@ -140,9 +143,12 @@ namespace DOCTORS_PORTAL
                     NextDocBtn.BaseColor = Color.FromArgb(55, 17, 123);
                     for (int i = lowerLimit; i < upperLimit; i++)
                     {
-                        showDoctorObj[i] = new showDoctor();
+                        showDoctorObj[i] = new showDoctor(dsForShowDocs.Tables[0].Rows[i]["ImageLink"].ToString());
                         showDoctorObj[i].DocName.Text = dsForShowDocs.Tables[0].Rows[i]["Name"].ToString();
                         showDoctorObj[i].CatName.Text = dsForShowDocs.Tables[0].Rows[i]["Category"].ToString();
+                       // showDoctorObj[i].ImageLink = dsForShowDocs.Tables[0].Rows[i]["ImageLink"].ToString();
+
+
 
                         showDoctorPanel.Controls.Add(showDoctorObj[i]);
                     }
@@ -166,10 +172,10 @@ namespace DOCTORS_PORTAL
         // next click
         private void gunaAdvenceButton3_Click(object sender, EventArgs e)
         {
-            if ((pageCount * 2) < totalDoctors)
+            if ((pageCount * maxCount) < totalDoctors)
             {
-                upperLimit += 2;
-                lowerLimit += 2;
+                upperLimit += maxCount;
+                lowerLimit += maxCount;
                 pageCount++;
                 getAllDoctorInformation();
             }
@@ -179,8 +185,8 @@ namespace DOCTORS_PORTAL
         {
             if(pageCount != 1)
             {
-                upperLimit -= 2;
-                lowerLimit -= 2;
+                upperLimit -= maxCount;
+                lowerLimit -= maxCount;
                 pageCount--;
                 getAllDoctorInformation();
             }
